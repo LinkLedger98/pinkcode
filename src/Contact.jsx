@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./Contact.css";
+import "./contact.css";
 
 const countries = [
   { name: "Botswana", code: "+267", flag: "🇧🇼" },
@@ -41,17 +41,17 @@ function Contact() {
     const form = event.currentTarget;
     const formData = new FormData(form);
 
-    try {
-      const response = await fetch(
-        "https://formspree.io/f/YOUR_FORM_ID",
-        {
-          method: "POST",
-          body: formData,
-          headers: {
-            Accept: "application/json",
-          },
-        }
-      );
+   try {
+  const response = await fetch(
+    "https://formspree.io/f/YOUR_REAL_FORM_ID",
+    {
+      method: "POST",
+      body: formData,
+      headers: {
+        Accept: "application/json",
+      },
+    }
+  );
 
       if (response.ok) {
         setSubmitted(true);
