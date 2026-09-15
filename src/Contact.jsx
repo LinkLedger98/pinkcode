@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./contact.css";
+import "./Contact.css";
 
 const countries = [
   { name: "Botswana", code: "+267", flag: "🇧🇼" },
