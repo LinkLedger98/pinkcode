@@ -42,16 +42,16 @@ function Contact() {
     const formData = new FormData(form);
 
    try {
-  const response = await fetch(
-    "https://formspree.io/f/YOUR_REAL_FORM_ID",
-    {
-      method: "POST",
-      body: formData,
-      headers: {
-        Accept: "application/json",
-      },
-    }
-  );
+ const response = await fetch(
+  "https://api.web3forms.com/submit",
+  {
+    method: "POST",
+    body: formData,
+    headers: {
+      Accept: "application/json",
+    },
+  }
+);
 
       if (response.ok) {
         setSubmitted(true);
@@ -161,6 +161,23 @@ function Contact() {
               className="project-form"
               onSubmit={handleSubmit}
             >
+                <input
+  type="hidden"
+  name="access_key"
+  value="9441749d-68a5-4c13-beb7-a8656390627c"
+/>
+
+<input
+  type="hidden"
+  name="subject"
+  value="New Website Inquiry from PinkCode"
+/>
+
+<input
+  type="hidden"
+  name="from_name"
+  value="PinkCode Website"
+/>
 
               {/* SECTION 01 */}
               <div className="form-section">
